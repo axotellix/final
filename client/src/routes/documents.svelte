@@ -17,9 +17,9 @@
     <h1>Мои документы</h1>
 
     <ul>
-        <li>Паспорт на сырье <button class = 'CTA'>открыть</button></li>
-        <li>Товарно-траспортная накладная <button class = 'CTA'>открыть</button></li>
-        <li>Акт приема сырья <button class = 'CTA'>открыть</button></li>
-        <li>Счет-фактура <button class = 'CTA'>открыть</button></li>
+        <li class = 'body-text'>Паспорт на сырье <button class = 'CTA'>открыть</button></li>
+        <li class = 'body-text'>Товарно-траспортная накладная <button class = 'CTA'>открыть</button></li>
+        <li class = 'body-text'>Акт приема сырья <button class = 'CTA'>открыть</button></li>
+        <li class = 'body-text'>Счет-фактура <button class = 'CTA'>открыть</button></li>
     </ul>
 </main>

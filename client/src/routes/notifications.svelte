@@ -16,5 +16,5 @@
 <main in:fade='{{ duration: 100 }}' out:fade|local='{{ duration: 100 }}' class = 'notifications'>
     <h1>Уведомления</h1>
 
-    <p>разгрузка завершена: ООО Увелка (гречка, 25 тонн)</p>
+    <p class = 'body-text'>разгрузка завершена: ООО Увелка (гречка, 25 тонн)</p>
 </main>
