@@ -15,4 +15,11 @@
 
 <main in:fade='{{ duration: 100 }}' out:fade|local='{{ duration: 100 }}' class = 'schedule'>
     <h1>Schedule page</h1>
+
+    <ul>
+        <li>09:00 прием гречки (ООО Увелка)</li>
+        <li>09:00 прием гречки (ООО Увелка)</li>
+        <li>09:00 прием гречки (ООО Увелка)</li>
+        <li>09:00 прием гречки (ООО Увелка)</li>
+    </ul>
 </main>
