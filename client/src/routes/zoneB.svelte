@@ -16,7 +16,12 @@
 
 
     // [ PROPS ]
+    let analytics_received  = false;
     let acceptance_complete = false;
+    let analytics_res = {
+        status: 'good',
+        percent: 0
+    }
     const analytics = {
         defects:     false,      // has defects / no defects
         defect_rate: 0,          // percentage
@@ -25,6 +30,17 @@
 
     onMount(() => {
         renderCanvas();
+
+        // get > image analytics from URI
+        const urlParams = new URLSearchParams(window.location.search);
+        let status = urlParams.get('status');
+        let percent = urlParams.get('percent');
+
+        if( status !== null && percent !== null) {
+            analytics_res.status  = status
+            analytics_res.percent = percent
+            analytics_received = true
+        }
     });
 
 
@@ -36,13 +52,27 @@
     <title>Monitoring</title>
 </svelte:head>
 
+<!-- modal: image analytics -->
+{#if analytics_received}
+    <div class="modal-result">
+        <div class="overlay" on:click={ () => { analytics_received = false } }></div>
+        <div class="message">
+            <h5 class="title">Результаты анализа:</h5>
+            <div class="content">
+                <p>{ 'status  = ' + analytics_res.status  }</p>
+                <p>{ 'percent = ' + analytics_res.percent }</p>
+            </div>
+        </div>
+    </div>
+{/if}
+
 <main in:fade='{{ duration: 100 }}' out:fade|local='{{ duration: 100 }}' class = 'monitoring'>
 
     <!-- [ section: zone tabs ] -->
     <ul class = 'zone-tabs'>
         <li class="tab"><a href = '/'>Зона А</a></li>
         <li class="tab active"><a href = 'zoneB'>Зона Б</a></li>
-        <li class="tab">Зона В</li>
+        <li class="tab"><a href = 'zoneC'>Зона В</a></li>
     </ul>
 
     <!-- [ section: dashboard ] -->
@@ -57,9 +87,10 @@
         <!-- video canvas & analytics -->
         <div class="monitor">
             <div class="video">
-                <form method="post" enctype="multipart/form-data" action = 'http://localhost:3333/upload'>
+                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'http://localhost:3333/upload'>
+                    <p class = 'description'>Загрузите изображение, чтобы проанализировать его</p>
                     <input type = 'file' name = 'img' class = 'CTA bg-orange' />
-                    <button type = 'submit' name = 'submit' class = 'CTA bg-orange upload'>upload</button>
+                    <button type = 'submit' name = 'submit' class = 'CTA bg-orange upload'>анализ</button>
                 </form>
             </div>
             <Analytics { analytics } />
