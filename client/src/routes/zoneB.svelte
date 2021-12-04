@@ -96,7 +96,7 @@
                 {#if analytics_received}
                     <img src="{ uploaded_img }" class = 'uploaded-img' alt="uploaded img">
                 {/if}
-                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'http://localhost:3333/upload'>
+                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'https://final-lemon-kappa.vercel.app/upload'>
                     <p class = 'description'>Загрузите изображение, чтобы проанализировать его</p>
                     <input type = 'file' name = 'img' class = 'CTA bg-orange' />
                     <button type = 'submit' name = 'submit' class = 'CTA bg-orange upload'>анализ</button>
