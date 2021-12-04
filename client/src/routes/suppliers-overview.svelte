@@ -68,7 +68,7 @@
                         <canvas class = 'progress' value = { analytics.defect_rate }></canvas>
                         <p class="caption">Процент брака</p>
                     </div>
-                    <button class="CTA-small select">выбрать</button>
+                    <button class="CTA-small select">связаться</button>
                 </div>
             </div>
 
@@ -97,7 +97,7 @@
                         <canvas class = 'progress' value = { analytics.defect_rate }></canvas>
                         <p class="caption">Процент брака</p>
                     </div>
-                    <button class="CTA-small select">выбрать</button>
+                    <button class="CTA-small select">связаться</button>
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
                         <canvas class = 'progress' value = { analytics.defect_rate }></canvas>
                         <p class="caption">Процент брака</p>
                     </div>
-                    <button class="CTA-small select">выбрать</button>
+                    <button class="CTA-small select">связаться</button>
                 </div>
             </div>
 
@@ -155,7 +155,7 @@
                         <canvas class = 'progress' value = { analytics.defect_rate }></canvas>
                         <p class="caption">Процент брака</p>
                     </div>
-                    <button class="CTA-small select">выбрать</button>
+                    <button class="CTA-small select">связаться</button>
                 </div>
             </div>
 
@@ -199,7 +199,7 @@
                         <canvas class = 'progress' value = { analytics.defect_rate }></canvas>
                         <p class="caption">Процент брака</p>
                     </div>
-                    <button class="CTA-small select">выбрать</button>
+                    <button class="CTA-small select">связаться</button>
                 </div>
             </div>
 
@@ -228,7 +228,7 @@
                         <canvas class = 'progress' value = { analytics.defect_rate }></canvas>
                         <p class="caption">Процент брака</p>
                     </div>
-                    <button class="CTA-small select">выбрать</button>
+                    <button class="CTA-small select">связаться</button>
                 </div>
             </div>
 
