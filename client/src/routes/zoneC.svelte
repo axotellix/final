@@ -79,7 +79,7 @@
         <!-- video canvas & analytics -->
         <div class="monitor">
             <div class="video">
-                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'https://final-server.vercel.app/getimg'>
+                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'http://localhost:3333/getimg'>
                     <p class = 'description'>Загрузите изображение, чтобы проанализировать его</p>
                     <input type = 'file' name = 'img' class = 'CTA bg-orange' />
                     <button type = 'submit' name = 'submit' class = 'CTA bg-orange upload'>анализ</button>
