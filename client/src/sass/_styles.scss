@@ -166,6 +166,17 @@ iframe .share-button, iframe .share-label {
     visibility: hidden !important;
 }
 
+// helpers > get random img
+.random-img {
+    width: 100%;
+    @include stretch(fixed);
+    margin: 0;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    gap: 20px;
+    @include flex-align;
+}
+
 
 
 
