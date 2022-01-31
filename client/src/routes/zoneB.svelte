@@ -25,6 +25,8 @@
     let analytics_received         = false;
     let acceptance_complete        = false;
 
+    let uploaded_img = api + 'res.png'
+    
     const analytics = {
         status:      'good',      // has defects / no defects
         percent:     0,           // percentage
@@ -46,7 +48,7 @@
             console.log(analytics.percent);
             analytics.invoice = 2100205
             analytics_received = true
-            api = api
+            uploaded_img = uploaded_img
         }
 
         renderCanvas(analytics.percent);
@@ -98,7 +100,7 @@
         <div class="monitor">
             <div class="video { analytics_received ? 'uploaded' : '' }">
                 {#if analytics_received}
-                    <img src="{api + 'res.png'}" class = 'uploaded-img' alt="uploaded img">
+                    <img src="{ uploaded_img }" class = 'uploaded-img' alt="uploaded img">
                 {/if}
                 <form method="post" class = 'upload-form' enctype="multipart/form-data" action = '{server + 'upload'}'>
                     <p class = 'description'>Загрузите изображение, чтобы проанализировать его</p>
