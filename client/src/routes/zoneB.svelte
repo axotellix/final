@@ -26,7 +26,7 @@
     let acceptance_complete        = false;
 
     let uploaded_img = api + 'res.png'
-    
+
     const analytics = {
         status:      'good',      // has defects / no defects
         percent:     0,           // percentage
