@@ -15,11 +15,16 @@
     import ProcessSchedule from '../components/ProcessSchedule.svelte';
 
 
+    // [ PRESETS ]
+    const api    = 'http://rsandrey.pythonanywhere.com/'
+    const server = 'http://localhost:4000/'
+
+
     // [ PROPS ]
     let extra_analytics_requested  = false;
     let analytics_received         = false;
     let acceptance_complete        = false;
-    let uploaded_img  = 'http://rsandrey.pythonanywhere.com/res.png';
+
     const analytics = {
         status:      'good',      // has defects / no defects
         percent:     0,           // percentage
@@ -93,9 +98,9 @@
         <div class="monitor">
             <div class="video { analytics_received ? 'uploaded' : '' }">
                 {#if analytics_received}
-                    <img src="{ uploaded_img }" class = 'uploaded-img' alt="uploaded img">
+                    <img src="{api + 'res.png'}" class = 'uploaded-img' alt="uploaded img">
                 {/if}
-                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'http://localhost:4000/upload'>
+                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = '{server + 'getimg'}'>
                     <p class = 'description'>Загрузите изображение, чтобы проанализировать его</p>
                     <input type = 'file' name = 'img' class = 'CTA bg-orange' />
                     <button type = 'submit' name = 'submit' class = 'CTA bg-orange upload'>анализ</button>
