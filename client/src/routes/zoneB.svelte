@@ -46,7 +46,7 @@
             console.log(analytics.percent);
             analytics.invoice = 2100205
             analytics_received = true
-            uploaded_img = uploaded_img
+            api = api
         }
 
         renderCanvas(analytics.percent);
