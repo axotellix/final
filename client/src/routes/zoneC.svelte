@@ -16,7 +16,7 @@
 
     // [ PRESETS ]
     const api    = 'http://rsandrey.pythonanywhere.com/'
-    const server = 'http://localhost:4000/'
+    const server = 'https://final-server-axotellix.vercel.app/'
 
 
     // [ PROPS ]
