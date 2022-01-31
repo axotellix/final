@@ -100,7 +100,7 @@
                 {#if analytics_received}
                     <img src="{api + 'res.png'}" class = 'uploaded-img' alt="uploaded img">
                 {/if}
-                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = '{server + 'getimg'}'>
+                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = '{server + 'upload'}'>
                     <p class = 'description'>Загрузите изображение, чтобы проанализировать его</p>
                     <input type = 'file' name = 'img' class = 'CTA bg-orange' />
                     <button type = 'submit' name = 'submit' class = 'CTA bg-orange upload'>анализ</button>

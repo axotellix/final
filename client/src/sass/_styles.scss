@@ -48,20 +48,20 @@ a {
 .modal-result {
     position: fixed;
     left: 0; top: 0; right: 0; bottom: 0;
-    z-index: 100;
+    z-index: 9999;
 
     .overlay {
         position: absolute;
         left: 0; top: 0; right: 0; bottom: 0;
         background: rgba(5, 8, 15, 0.8);
         backdrop-filter: blur(2px);
-        z-index: 101;
+        z-index: 200;
     }
 
     .message {
         width: 40%; height: 70%;
         border-radius: 7px;
-        z-index: 102;
+        z-index: 201;
         overflow: hidden;
         @include align;
         @extend .shadow-black;
@@ -157,6 +157,13 @@ main {
 
 svg.ico {
     width: 22px; height: 22px; 
+}
+
+// vimeo
+iframe .share-button, iframe .share-label {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 
 

@@ -56,7 +56,7 @@
     overflow: hidden;
     @include flex-align;
 
-    video {
+    video, iframe {
         margin: 0;
         padding: 0;
         height: 180%;

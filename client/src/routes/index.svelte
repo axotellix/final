@@ -58,7 +58,7 @@
         <!-- video canvas & analytics -->
         <div class="monitor">
             <div class="video">
-                <video src="/img/stream_example.mov" loop = 'true' muted = 'true' autoplay="autoplay"></video>
+                <iframe src="https://player.vimeo.com/video/671962779?h=f5f328eef6&controls=0&muted=1&autoplay=1&loop=1" width="640" height="1138" frameborder="0" allow="autoplay" allowfullscreen></iframe>
             </div>
             <Analytics { analytics } />
         </div>
