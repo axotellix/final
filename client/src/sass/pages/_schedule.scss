@@ -1,0 +1,21 @@
+
+// [ PAGE: SCHEDULE ]
+.schedule .schedule-note {
+    width: 520px;
+    padding: 15px;
+    border-radius: 7px;
+    background: darken($d-white, 5%);
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    color: $d-grey;
+    transition: background 0.25s;
+    @include flex-align(flex-start, center);
+
+    &:hover {
+        background: darken($d-white, 8%);
+    }
+}
+
+.schedule .schedule-note .badge {
+    margin-right: 25px;
+}

@@ -1,0 +1,34 @@
+
+// [ CIRCLE PROGRESS ]
+.circle-progress {
+    width: auto; height: auto;
+    position: relative;
+    transition: all 0.25s;
+    @include flex-align;
+}
+.circle-progress::before {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    content: attr(data-progress)"%";
+    display: block;
+    @include flex-align;
+    color: $purple;
+    font-size: 3rem;
+    z-index: 100;
+    transition: all 0.25s;
+}
+.circle-progress .track {
+    stroke: $d-white;
+    fill: none;
+    transition: all 0.25s;
+}
+
+.circle-progress .progress {
+    stroke: $purple;
+    stroke-linecap: round;
+    fill: none;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: all 0.25s;
+}

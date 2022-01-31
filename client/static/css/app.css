@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'Normalize.css';
 :root {
   --m-tiny: 25px;
@@ -528,6 +529,16 @@ body {
 }
 
 a {
+  color: #414A63;
+}
+
+.page-title {
+  margin-bottom: var(--m-medium);
+}
+
+.body-text {
+  margin-bottom: 10px;
+  font-size: 1.7rem;
   color: #414A63;
 }
 
@@ -1144,6 +1155,121 @@ main {
   width: 100%;
 }
 
+.documents .doc {
+  width: 520px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background: #e4e7f2;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  color: #414A63;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.documents .doc:hover {
+  background: #dadeec;
+}
+
+.notifications .notification {
+  width: 520px;
+  padding: 15px 25px;
+  border-radius: 7px;
+  background: #e4e7f2;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  color: #414A63;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.notifications .notification.complete::before {
+  content: "🗸";
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin-right: 25px;
+  font-size: 3rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 45px;
+  background: #5EDB98;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.notifications .notification:hover {
+  background: #dadeec;
+}
+
+.notifications .notification-msg {
+  margin: 0;
+}
+.notifications .notification-msg .notification-title {
+  display: block;
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.schedule .schedule-note {
+  width: 520px;
+  padding: 15px;
+  border-radius: 7px;
+  background: #e4e7f2;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  color: #414A63;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.schedule .schedule-note:hover {
+  background: #dadeec;
+}
+
+.schedule .schedule-note .badge {
+  margin-right: 25px;
+}
+
 .dashboard .monitor .analytics {
   width: 30%;
   aspect-ratio: 9/13;
@@ -1202,4 +1328,68 @@ main {
 }
 .dashboard .monitor .analytics .invoice.no-defect {
   color: #5EDB98;
+}
+
+.circle-progress {
+  width: auto;
+  height: auto;
+  position: relative;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.circle-progress::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: attr(data-progress) "%";
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #C65BEC;
+  font-size: 3rem;
+  z-index: 100;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.circle-progress .track {
+  stroke: #F5F6FA;
+  fill: none;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.circle-progress .progress {
+  stroke: #C65BEC;
+  stroke-linecap: round;
+  fill: none;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }

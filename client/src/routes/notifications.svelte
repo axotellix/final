@@ -14,7 +14,14 @@
 </svelte:head>
 
 <main in:fade='{{ duration: 100 }}' out:fade|local='{{ duration: 100 }}' class = 'notifications'>
-    <h1>Уведомления</h1>
+    <h1 class = 'page-title'>Уведомления</h1>
 
-    <p class = 'body-text'>разгрузка завершена: ООО Увелка (гречка, 25 тонн)</p>
+    <ul class = 'notifications-wrapper'>
+        <li class = 'notification complete'>
+            <p class = 'notification-msg'>
+                <span class = 'notification-title'>12:00 разгрузка завершена:</span>
+                ООО Увелка (гречка, 25 тонн)
+            </p>
+        </li>
+    </ul>
 </main>

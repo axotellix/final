@@ -16,7 +16,8 @@
 		
 		<!-- [ SCRIPTS ] -->
 		<script defer src='https://unpkg.com/pdf-lib/dist/pdf-lib.min.js'></script>
-		<script defer src='/src/lib/pdf-lib.js'></script>
+		<script defer context = 'module' src='/src/lib/pdf-lib.js'></script>
+		<script defer context = 'module' src='/.svelte-kit/build/app.js'></script>
 	</head>
 	<body>
 		<div id="svelte">%svelte.body%</div>

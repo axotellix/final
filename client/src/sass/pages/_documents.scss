@@ -1,0 +1,20 @@
+
+// [ PAGE: DOCUMENTS ]
+// .documents {
+
+// }
+.documents .doc {
+    width: 520px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    background: darken($d-white, 5%);
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    color: $d-grey;
+    transition: background 0.25s;
+    @include flex-align(space-between);
+
+    &:hover {
+        background: darken($d-white, 8%);
+    }
+}

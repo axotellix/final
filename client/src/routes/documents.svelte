@@ -14,12 +14,12 @@
 </svelte:head>
 
 <main in:fade='{{ duration: 100 }}' out:fade|local='{{ duration: 100 }}' class = 'documents'>
-    <h1>Мои документы</h1>
+    <h1 class = 'page-title'>Мои документы</h1>
 
-    <ul>
-        <li class = 'body-text'>Паспорт на сырье <button class = 'CTA'>открыть</button></li>
-        <li class = 'body-text'>Товарно-траспортная накладная <button class = 'CTA'>открыть</button></li>
-        <li class = 'body-text'>Акт приема сырья <button class = 'CTA'>открыть</button></li>
-        <li class = 'body-text'>Счет-фактура <button class = 'CTA'>открыть</button></li>
+    <ul class = 'documents-wrapper'>
+        <li class = 'doc'>Паспорт на сырье <button class = 'CTA'>открыть</button></li>
+        <li class = 'doc'>Товарно-траспортная накладная <button class = 'CTA'>открыть</button></li>
+        <li class = 'doc'>Акт приема сырья <button class = 'CTA'>открыть</button></li>
+        <li class = 'doc'>Счет-фактура <button class = 'CTA'>открыть</button></li>
     </ul>
 </main>

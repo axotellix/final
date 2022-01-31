@@ -14,6 +14,10 @@
     import Analytics from '../components/Analytics.svelte';
     import ProcessSchedule from '../components/ProcessSchedule.svelte';
 
+    // [ PRESETS ]
+    const api    = 'http://rsandrey.pythonanywhere.com/'
+    const server = 'http://localhost:4000/'
+
 
     // [ PROPS ]
     let analytics_received  = false;
@@ -52,7 +56,7 @@
         <div class="message">
             <h5 class="title">Результаты анализа:</h5>
             <div class="content">
-                <p><img src="https://final.teambolognese.ru/res.png" alt="defect highlighted"></p>
+                <p><img src="{api + 'res.png'}" alt="defect highlighted"></p>
             </div>
         </div>
     </div>
@@ -79,7 +83,7 @@
         <!-- video canvas & analytics -->
         <div class="monitor">
             <div class="video">
-                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'http://localhost:3333/getimg'>
+                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = "{server + 'getimg'}">
                     <p class = 'description'>Загрузите изображение, чтобы проанализировать его</p>
                     <input type = 'file' name = 'img' class = 'CTA bg-orange' />
                     <button type = 'submit' name = 'submit' class = 'CTA bg-orange upload'>анализ</button>

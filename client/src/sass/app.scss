@@ -27,8 +27,12 @@
 // [ PAGES ]
 @import 'pages/monitoring';
 @import 'pages/suppliers-overview';
+@import 'pages/documents';
+@import 'pages/notifications';
+@import 'pages/schedule';
 
 
 // [ COMPONENTS ]
 @import 'components/analytics';
+@import 'components/circle-progress';
 

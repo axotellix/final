@@ -43,7 +43,7 @@
     <ul class = 'zone-tabs'>
         <li class="tab active"><a href = '/'>Зона А</a></li>
         <li class="tab"><a href = 'zoneB'>Зона Б</a></li>
-        <li class="tab">Зона В</li>
+        <li class="tab"><a href = 'zoneC'>Зона В</a></li> 
     </ul>
 
     <!-- [ section: dashboard ] -->

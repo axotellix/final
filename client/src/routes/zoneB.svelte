@@ -19,11 +19,11 @@
     let extra_analytics_requested  = false;
     let analytics_received         = false;
     let acceptance_complete        = false;
-    let uploaded_img  = 'https://final.teambolognese.ru/res.png';
+    let uploaded_img  = 'http://rsandrey.pythonanywhere.com/res.png';
     const analytics = {
         status:      'good',      // has defects / no defects
-        percent:     0,          // percentage
-        invoice:     0,    // price of no-defect cargo
+        percent:     0,           // percentage
+        invoice:     0,           // price of no-defect cargo
     }
 
 
@@ -46,7 +46,6 @@
 
         renderCanvas(analytics.percent);
 
-        
     });
 
 
@@ -96,7 +95,7 @@
                 {#if analytics_received}
                     <img src="{ uploaded_img }" class = 'uploaded-img' alt="uploaded img">
                 {/if}
-                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'https://final-lemon-kappa.vercel.app/upload'>
+                <form method="post" class = 'upload-form' enctype="multipart/form-data" action = 'http://localhost:4000/upload'>
                     <p class = 'description'>Загрузите изображение, чтобы проанализировать его</p>
                     <input type = 'file' name = 'img' class = 'CTA bg-orange' />
                     <button type = 'submit' name = 'submit' class = 'CTA bg-orange upload'>анализ</button>
@@ -106,7 +105,14 @@
         </div>
 
         <!-- button: complete acceptance -->
-        <button class="CTA complete-acceptance">завершить приемку</button>
+        {#if !acceptance_complete}
+            <button on:click|preventDefault={ () => { acceptance_complete = true ; createPDF() } } class="CTA complete-acceptance">завершить приемку</button>
+        {:else}
+            <div class="hidden-area">
+                <a href = '' on:click={ openPDF } class="CTA bg-orange make-invoice view-pdf">выставить счет</a>
+                <a href = 'suppliers-overview' class="CTA order">дозаказать</a>
+            </div>
+        {/if}
     </div>
 
     <!-- [ section: process schedule ] -->

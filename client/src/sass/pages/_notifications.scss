@@ -1,0 +1,42 @@
+
+// [ PAGE: NOTIFICATIONS ]
+.notifications .notification {
+    width: 520px;
+    padding: 15px 25px;
+    border-radius: 7px;
+    background: darken($d-white, 5%);
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    color: $d-grey;
+    transition: background 0.25s;
+    @include flex-align(flex-start, center);
+
+    &.complete::before {
+        content: '\1F5F8';
+        display: block;
+        width: 45px; height: 45px;
+        margin-right: 25px;
+        font-size: 3rem;
+        color: $white;
+        font-weight: $f-bold;
+        border-radius: 45px; 
+        background: $green;
+        @include flex-align;
+    }
+
+    &:hover {
+        background: darken($d-white, 8%);
+    }
+}
+
+.notifications .notification-msg {
+    margin: 0;
+
+    .notification-title {
+        display: block;
+        margin-top: 0;
+        font-weight: $f-bold;
+        margin-bottom: 10px;
+    }
+}
+

@@ -2,6 +2,9 @@
 <!-- [ SCRIPTS ] -->
 <script>
 
+    // [ IMPORTS: components ]
+    import CircleProgress from '../components/CircleProgress.svelte';
+
     // [ PROPS ]
     export let analytics;
 
@@ -20,7 +23,7 @@
 
     <div class="defect-rate">
         <!-- <img src="/img/circle-progress.png" alt="defect-rate"> -->
-        <canvas class = 'progress' value = { analytics.percent }></canvas>
+        <CircleProgress value = { analytics.percent } />
         <span class="caption">Процент брака</span>
     </div>
 

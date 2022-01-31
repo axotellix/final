@@ -13,6 +13,10 @@ a {
     color: $d-grey;
 }
 
+.page-title {
+    margin-bottom: var(--m-medium);
+}
+
 .body-text {
     margin-bottom: 10px;
     font-size: 1.7rem;

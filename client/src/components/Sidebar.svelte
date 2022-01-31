@@ -5,12 +5,31 @@
     // [ IMPORTS: stores ]
     import NavStore from '../stores/NavStore.js';
 
+    // [ IMPORTS: system ]
+    import { onMount } from 'svelte';
+
     // [ FUNCTIONS ]
     const updateActive = ( route ) => {
         NavStore.update(() => {
 			return route;
 		});
     }
+
+    // [ HOOKS ]
+    onMount(() => {
+        
+        // get > image analytics from URI
+        const url = window.location.href
+        let page = 'monitoring'
+        if( url.indexOf('documents') > 0 ) page = 'documents'
+        if( url.indexOf('notifications') > 0 ) page = 'notifications'
+        if( url.indexOf('schedule') > 0 ) page = 'schedule'
+        
+        NavStore.update(() => {
+			return page;
+		});
+    
+    });
 
 
 
